@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
-import { catchError, map } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { Observable, throwError, catchError } from 'rxjs';
 import { Router } from '@angular/router';
 
 //Declaring the api url that will provide data for the client app
