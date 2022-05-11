@@ -45,8 +45,7 @@ export class FetchApiDataService {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),
-      })
-      .pipe(map(this.extractResponseData), catchError(this.handleError));
+      }).pipe(catchError(this.handleError));
   }
 
   // user gets details for a single movie
@@ -58,7 +57,7 @@ export class FetchApiDataService {
           Authorization: 'Bearer ' + token,
         }),
       })
-      .pipe(map(this.extractResponseData), catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   // user gets director details
@@ -70,7 +69,7 @@ export class FetchApiDataService {
           Authorization: 'Bearer ' + token,
         }),
       })
-      .pipe(map(this.extractResponseData), catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   // user gets genre details
@@ -82,7 +81,7 @@ export class FetchApiDataService {
           Authorization: 'Bearer ' + token,
         }),
       })
-      .pipe(map(this.extractResponseData), catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   // user gets profile data
@@ -95,7 +94,7 @@ export class FetchApiDataService {
           Authorization: 'Bearer ' + token,
         }),
       })
-      .pipe(map(this.extractResponseData), catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   // user update his profile
@@ -109,7 +108,7 @@ export class FetchApiDataService {
           Authorization: 'Bearer ' + token,
         }),
       })
-      .pipe(map(this.extractResponseData), catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   // user adds favorite movie to list
@@ -122,7 +121,7 @@ export class FetchApiDataService {
           Authorization: 'Bearer ' + token,
         }),
       })
-      .pipe(map(this.extractResponseData), catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   // user removes favorite movie from list
@@ -135,7 +134,7 @@ export class FetchApiDataService {
           Authorization: 'Bearer ' + token,
         }),
       })
-      .pipe(map(this.extractResponseData), catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   // user deletes profile
@@ -148,7 +147,7 @@ export class FetchApiDataService {
           Authorization: 'Bearer ' + token,
         }),
       })
-      .pipe(map(this.extractResponseData), catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   private handleError(error: HttpErrorResponse): any {
