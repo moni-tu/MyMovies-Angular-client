@@ -18,14 +18,14 @@ const username = localStorage.getItem('username');
 
 export class FetchApiDataService {
   // Inject the HttpClient module to the constructor params
- // This will provide HttpClient to the entire class, making it available via this.http
-  constructor(private http: HttpClient) {}
+  // This will provide HttpClient to the entire class, making it available via this.http
+  constructor(private http: HttpClient, private router: Router) { }
 
- // Making the api call for the user registration endpoint
+  // Making the api call for the user registration endpoint
   public userRegistration(userDetails: any): Observable<any> {
     console.log(userDetails);
     return this.http.post(apiUrl + 'users', userDetails).pipe(
-    catchError(this.handleError)
+      catchError(this.handleError)
     );
   }
 
@@ -126,11 +126,11 @@ export class FetchApiDataService {
   }
 
   // user removes favorite movie from list
-  deleteFavoriteMovie(id: string): Observable<any> {
+  deleteFavoriteMovie(_id: string): Observable<any> {
     const token = localStorage.getItem('token');
     const Username = localStorage.getItem('username');
     return this.http
-      .delete(apiUrl + `users/${Username}/favorites/${id}`, {
+      .delete(apiUrl + `users/${Username}/favorites/${_id}`, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),
@@ -153,19 +153,19 @@ export class FetchApiDataService {
 
   private handleError(error: HttpErrorResponse): any {
     if (error.error instanceof ErrorEvent) {
-    console.error('Some error occurred:', error.error.message);
+      console.error('Some error occurred:', error.error.message);
     } else {
-    console.error(
+      console.error(
         `Error Status code ${error.status}, ` +
         `Error body is: ${error.error}`);
     }
     return throwError(
-    'Something bad happened; please try again later.');
+      'Something bad happened; please try again later.');
   }
 
   // Non-typed response extraction
   private extractResponseData(res: Response): any {
     const body = res;
-    return body || { };
+    return body || {};
   }
 }
