@@ -12,6 +12,7 @@ export class MovieCardComponent implements OnInit {
 
   constructor(public fetchMovies: FetchApiDataService) { }
 
+  // ngOnInit methos has the same logic as component did mount in React (gets called aferwards)
   ngOnInit(): void {
     this.getMovies();
   }
