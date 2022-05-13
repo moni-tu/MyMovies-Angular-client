@@ -34,6 +34,7 @@ export class UserLoginFormComponent implements OnInit {
         duration: 2000
     });
     }, (result) => {
+      console.log(result)
       this.snackBar.open(result, 'OK', {
         duration: 2000
       });
