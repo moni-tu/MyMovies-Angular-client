@@ -8,9 +8,8 @@ import { FetchApiDataService } from '../fetch-api-data.service'
 })
 export class MovieCardComponent implements OnInit {
 
-  movies: any [] = [];
-
-  constructor(public fetchMovies: FetchApiDataService) { }
+  movies: any[] = [];
+  constructor(public fetchApiData: FetchApiDataService) { }
 
   // ngOnInit methos has the same logic as component did mount in React (gets called aferwards)
   ngOnInit(): void {
@@ -18,7 +17,7 @@ export class MovieCardComponent implements OnInit {
   }
 
   getMovies(): void {
-    this.fetchMovies.getAllMovies().subscribe((resp: any) => {
+    this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
       console.log(this.movies);
       return this.movies;
