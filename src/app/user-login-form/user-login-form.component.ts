@@ -27,7 +27,9 @@ export class UserLoginFormComponent implements OnInit {
 
   // This is the function responsible for sending the form inputs to the backend
   loginUser(): void {
-    this.fetchApiData.userRegistration(this.userData).subscribe((result) => {
+    this.fetchApiData.userLogin(this.userData).subscribe((result) => {
+      localStorage.setItem('user', result.user.Username);
+      localStorage.setItem('token', result.user.token);
   // Logic for a successful user registration goes here! (To be implemented)
     this.dialogRef.close(); // This will close the modal on success!
     this.snackBar.open(result, 'OK', {
