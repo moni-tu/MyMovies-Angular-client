@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { map } from 'rxjs/operators';
+/* import { map } from 'rxjs/operators'; */
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError, catchError } from 'rxjs';
 import { Router } from '@angular/router';
@@ -10,7 +10,7 @@ const apiUrl = 'https://mymovie-backend-api.herokuapp.com/';
 //get the token from local storage
 const token = localStorage.getItem('token');
 // Get username from localStorage for URLs
-const username = localStorage.getItem('username');
+const Username = localStorage.getItem('Username');
 
 @Injectable({
   providedIn: 'root'
