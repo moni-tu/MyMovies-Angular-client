@@ -1,1 +1,9 @@
-<p>menu-bar works!</p>
+<mat-menu #appMenu="matMenu">
+    <button mat-menu-item (click)="toMovies()">Movies</button>
+    <button mat-menu-item (click)="toProfilePage()">User Profile</button>
+    <button mat-menu-item (click)="logOut()">Log Out</button>
+</mat-menu>
+
+<button mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon>more_vert</mat-icon>
+</button>

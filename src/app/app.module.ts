@@ -16,6 +16,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 // import MatIcon for the favorite movie icon
 import { MatIconModule } from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
 
 import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
@@ -26,6 +27,7 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
+  /* { path: 'profile', component: ProfileViewComponent }, */
   // in case anything happens we need the app to know where to re-direct the user
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
 ];
@@ -52,7 +54,8 @@ const appRoutes: Routes = [
     MatSnackBarModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    MatIconModule
+    MatIconModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
