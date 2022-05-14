@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service'
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+// import app components
+import { SynopsisViewComponent } from '../synopsis-view/synopsis-view.component';
 
 @Component({
   selector: 'app-movie-card',
@@ -9,7 +13,13 @@ import { FetchApiDataService } from '../fetch-api-data.service'
 export class MovieCardComponent implements OnInit {
 
   movies: any[] = [];
-  constructor(public fetchApiData: FetchApiDataService) { }
+
+  constructor(
+    public fetchApiData: FetchApiDataService,
+    public dialog: MatDialog, 
+    public snackBar: MatSnackBar,
+    /* public router: Router */
+    ) { }
 
   // ngOnInit methos has the same logic as component did mount in React (gets called aferwards)
   ngOnInit(): void {
@@ -23,4 +33,15 @@ export class MovieCardComponent implements OnInit {
       return this.movies;
     });
   }
+  // opens synopsis view
+  getSynopsis(title: string, imagePath: any, description: string): void {
+    this.dialog.open(SynopsisViewComponent, {
+      data: {
+        title: title,
+        imagePath: imagePath,
+        description: description,
+      },
+      width: '500px'
+     });
+    }
 }

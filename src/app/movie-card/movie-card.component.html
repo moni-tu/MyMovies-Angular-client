@@ -21,6 +21,11 @@
             <button
                 mat-button
                 color="primary"
+                (click)="getSynopsis(
+                    movie.title,
+                    movie.imagePath,
+                    movie.description
+                    )"
             >
                 Synopsis
             </button>
