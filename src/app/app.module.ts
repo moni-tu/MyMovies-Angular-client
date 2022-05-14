@@ -14,6 +14,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
+// import MatIcon for the favorite movie icon
+import { MatIconModule } from '@angular/material/icon';
 
 import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
@@ -47,7 +49,8 @@ const appRoutes: Routes = [
     MatDialogModule,
     MatSnackBarModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
