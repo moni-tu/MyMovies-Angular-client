@@ -26,6 +26,7 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { SynopsisViewComponent } from './synopsis-view/synopsis-view.component';
 import { DirectorViewComponent } from './director-view/director-view.component';
 import { GenreViewComponent } from './genre-view/genre-view.component';
+import { ProfileViewComponent } from './profile-view/profile-view.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     MenuBarComponent,
     SynopsisViewComponent,
     DirectorViewComponent,
-    GenreViewComponent
+    GenreViewComponent,
+    ProfileViewComponent
   ],
   imports: [
     BrowserModule,
