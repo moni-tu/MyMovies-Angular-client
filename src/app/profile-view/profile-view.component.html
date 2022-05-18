@@ -1,5 +1,35 @@
 <app-menu-bar></app-menu-bar>
 <div class="user-profile">
+
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Your Profile Information</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="user-profile-info">
+            <p><b>Username:</b> {{user.Username}}</p>
+            <p><b>Email:</b> {{user.Email}}</p>
+            <p><b>Birthday:</b> {{user.Birthday | date }}</p>
+        </mat-card-content>
+        <mat-card-actions class="usercard-actions">
+          <button
+                mat-stroked-button
+                
+                class="edit-profile-button"
+            > 
+                <mat-icon>edit</mat-icon>
+                Edit Profile
+            </button>
+            <button
+                mat-stroked-button
+                (click)="deleteUserProfile()"
+                class="delete-profile-button"
+            >
+                <mat-icon>delete_forever</mat-icon>
+                Delete Profile
+            </button>
+            
+        </mat-card-actions>
+    </mat-card>
     
 
 </div>
