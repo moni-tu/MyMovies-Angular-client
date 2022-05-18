@@ -1,1 +1,12 @@
-<p>genre-view works!</p>
+<mat-card>
+    <mat-card-title>{{ data.name }}</mat-card-title><br>
+    <mat-card-content>{{ data.description }}</mat-card-content>
+    <mat-card-actions>
+      <button 
+        mat-stroked-button  
+        mat-dialog-close 
+        class="btn">
+          Close
+      </button>
+    </mat-card-actions>
+  </mat-card>
