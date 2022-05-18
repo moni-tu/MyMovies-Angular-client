@@ -5,6 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 // import app components
 import { SynopsisViewComponent } from '../synopsis-view/synopsis-view.component';
 import { DirectorViewComponent } from '../director-view/director-view.component';
+import { GenreViewComponent } from '../genre-view/genre-view.component';
 
 @Component({
   selector: 'app-movie-card',
@@ -53,6 +54,16 @@ export class MovieCardComponent implements OnInit {
         name: name,
         bio: bio,
         birth: birth,
+      },
+      width: '500px'
+    });
+  }
+  // opens genre view
+  getGenre(name: string, description: string): void {
+    this.dialog.open(GenreViewComponent, {
+      data: {
+        name: name,
+        description: description
       },
       width: '500px'
     });

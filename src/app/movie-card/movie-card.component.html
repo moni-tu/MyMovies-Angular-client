@@ -9,6 +9,10 @@
             <button
                 mat-button
                 color="primary"
+                (click)="getGenre(
+                    movie.genre.name,
+                    movie.genre.description
+                )"
             >
                 Genre
             </button>
