@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { FetchApiDataService } from '../fetch-api-data.service';
+/* import { UserEditComponent } from '../user-edit/user-edit.component'; */
 
 @Component({
   selector: 'app-profile-view',
