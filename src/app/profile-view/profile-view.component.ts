@@ -25,6 +25,8 @@ export class ProfileViewComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.getProfile();
+    this.getFavoriteMovies();
   }
 
   // get user profile info
