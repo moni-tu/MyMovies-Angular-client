@@ -46,7 +46,7 @@ export class MovieCardComponent implements OnInit {
      });
     }
   
-  // opens synopsis view
+  // opens director view
   getDirector(name: string, bio: string, birth: string): void {
     this.dialog.open(DirectorViewComponent, {
       data: {
@@ -55,6 +55,6 @@ export class MovieCardComponent implements OnInit {
         birth: birth,
       },
       width: '500px'
-     });
-    }
+    });
+  }
 }
