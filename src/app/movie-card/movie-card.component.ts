@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 // import app components
 import { SynopsisViewComponent } from '../synopsis-view/synopsis-view.component';
+import { DirectorViewComponent } from '../director-view/director-view.component';
 
 @Component({
   selector: 'app-movie-card',
@@ -40,6 +41,18 @@ export class MovieCardComponent implements OnInit {
         title: title,
         imagePath: imagePath,
         description: description,
+      },
+      width: '500px'
+     });
+    }
+  
+  // opens synopsis view
+  getDirector(name: string, bio: string, birth: string): void {
+    this.dialog.open(DirectorViewComponent, {
+      data: {
+        name: name,
+        bio: bio,
+        birth: birth,
       },
       width: '500px'
      });

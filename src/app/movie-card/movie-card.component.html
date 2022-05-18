@@ -15,6 +15,12 @@
             <button
                 mat-button
                 color="primary"
+                (click)="getDirector(
+                    movie.director.name,
+                    movie.director.bio,
+                    movie.director.birth
+
+                )"
             >
                 Director
             </button>
