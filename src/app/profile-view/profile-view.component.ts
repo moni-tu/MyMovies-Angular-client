@@ -16,7 +16,7 @@ import { SynopsisViewComponent } from '../synopsis-view/synopsis-view.component'
 })
 export class ProfileViewComponent implements OnInit {
   user: any = {};
-  username: any = localStorage.getItem('user');
+  Username: any = localStorage.getItem('user');
   movies: any[] = [];
   Favorites: any[] = [];
   displayElement: boolean = false
@@ -35,8 +35,8 @@ export class ProfileViewComponent implements OnInit {
 
   // get user profile info
   getProfile(): void {
-    const username = localStorage.getItem('user');
-    if (username) {
+    const Username = localStorage.getItem('user');
+    if (Username) {
       // getUserProfile() is in fetchapidataservice.ts
       this.fetchApiData.getUserProfile().subscribe((res: any) => {
         this.user = res;
