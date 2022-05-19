@@ -34,6 +34,7 @@ const appRoutes: Routes = [
   /* { path: 'profile', component: ProfileViewComponent }, */
   // in case anything happens we need the app to know where to re-direct the user
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
+  { path: 'profile', component: ProfileViewComponent},
 ];
 
 @NgModule({
