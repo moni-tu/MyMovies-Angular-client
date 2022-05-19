@@ -7,8 +7,10 @@
         </mat-card-header>
         <mat-card-content class="user-profile-info">
             <p><b>Username:</b> {{user.Username}}</p>
+            <p><b>Password:</b> {{user.Password}}</p>
             <p><b>Email:</b> {{user.Email}}</p>
             <p><b>Birthday:</b> {{user.Birthday | date }}</p>
+            <p><b>Favorites:</b> {{user.Favorites}}</p>
         </mat-card-content>
         <mat-card-actions class="usercard-actions">
           <button
@@ -35,7 +37,7 @@
     <mat-card *ngFor="let movie of Favorites; let i = index;" class="favorite-movies">
         <mat-card-header>
             <mat-card-title>
-              {{movie.title}}
+              {{user.Favorites}} {{movie.title}}
             </mat-card-title>
             <mat-card-subtitle>Directed by: 
                 <button 
