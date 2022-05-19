@@ -87,9 +87,9 @@ export class FetchApiDataService {
   // user gets profile data
   getUserProfile(): Observable<any> {
     const token = localStorage.getItem('token');
-    const user = localStorage.getItem('username');
+    const user = localStorage.getItem('Username');
     return this.http
-      .get(apiUrl + `users/${user}`, {
+      .get(apiUrl + `users/${Username}`, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),
@@ -100,7 +100,7 @@ export class FetchApiDataService {
   // user update his profile
   editUserProfile(userData: object): Observable<any> {
     const token = localStorage.getItem('token');
-    const Username = localStorage.getItem('username');
+    const Username = localStorage.getItem('Username');
     return this.http
       // Username with capital letter in profile-view.jsx
       .put(apiUrl + `users/${Username}`, userData, {
