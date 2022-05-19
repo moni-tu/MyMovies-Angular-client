@@ -38,8 +38,8 @@ export class ProfileViewComponent implements OnInit {
     const Username = localStorage.getItem('user');
     if (Username) {
       // getUserProfile() is in fetchapidataservice.ts
-      this.fetchApiData.getUserProfile().subscribe((res: any) => {
-        this.user = res;
+      this.fetchApiData.getUserProfile().subscribe((resp: any) => {
+        this.user = resp;
         console.log(this.user);
         return this.user;
       });
@@ -50,7 +50,7 @@ export class ProfileViewComponent implements OnInit {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
       this.movies.forEach((movie: any) => {
-        if (this.user.Favorites.includes(movie._id)) {
+        if (this.user.Favorites.includes(movie)) {
           this.Favorites.push(movie);
         }
       });
