@@ -24,11 +24,73 @@
                 (click)="deleteUserProfile()"
                 class="delete-profile-button"
             >
-                <mat-icon>delete_forever</mat-icon>
+                <mat-icon>delete user profile</mat-icon>
                 Delete Profile
             </button>
             
         </mat-card-actions>
+    </mat-card>
+
+    <!-- the content of the mat-card lable is very important -->
+    <mat-card *ngFor="let movie of Favorites; let i = index;" class="favorite-movies">
+        <mat-card-header>
+            <mat-card-title>
+              {{movie.title}}
+            </mat-card-title>
+            <mat-card-subtitle>Directed by: 
+                <button 
+                  class="director-button"
+                  mat-button
+                  color="grey"
+                  (click)="getDirector(
+                    movie.title,
+                    movie.director.name,
+                    movie.director.bio,
+                    movie.director.birth
+                    )"
+                > 
+                  {{movie.director.name}}
+                </button>
+            </mat-card-subtitle>
+        </mat-card-header>
+            <img src={{movie.imagePath}} alt= {{movie.title}} />
+            <mat-card-actions>
+              <button
+                class="genre-button"
+                mat-raised-button
+                color="primary"
+                (click)="getGenre(
+                  movie.title,
+                  movie.genre.name,
+                  movie.genre.description
+                  )"
+              >
+                {{movie.genre.name}}
+              </button>
+        
+              <button
+                class="synopsis-button"
+                mat-raised-button
+                color="primary"
+                (click)="getSynopsis(
+                    movie.title,
+                    movie.imagePath,
+                    movie.description
+                  )"
+              >
+                Synopsis
+              </button>
+        
+                <mat-card-actions>
+                  <button 
+                    class="delete-fav-button"
+                    mat-icon-button 
+                    (click)="deleteFavoriteMovie(movie._id)"
+                  >
+                    <mat-icon>remove from favorite movies</mat-icon>
+                  </button>
+                </mat-card-actions>
+            </mat-card-actions>
     </mat-card>
     
 

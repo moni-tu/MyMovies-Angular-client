@@ -2,7 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+//import components
+import { DirectorViewComponent } from '../director-view/director-view.component';
 import { FetchApiDataService } from '../fetch-api-data.service';
+import { GenreViewComponent } from '../genre-view/genre-view.component';
+import { SynopsisViewComponent } from '../synopsis-view/synopsis-view.component';
 /* import { UserEditComponent } from '../user-edit/user-edit.component'; */
 
 @Component({
@@ -55,15 +59,55 @@ export class ProfileViewComponent implements OnInit {
   }
 
   // delete favorite movie
-  deleteFavoriteMovies(_id: string, title: string): void {
+  deleteFavoriteMovie(_id: string): void {
     // deleteFavoriteMovie is in fetchapi dataservice
     this.fetchApiData.deleteFavoriteMovie(_id).subscribe((res: any) => {
-      this.snackBar.open(`Successfully removed ${title} from favorite movies.`, 'OK', {
+      this.snackBar.open(`Successfully removed ${_id} from favorite movies.`, 'OK', {
         duration: 4000, verticalPosition: 'top'
       });
       setTimeout(function () {
         window.location.reload();
       }, 4000);
+    });
+  }
+
+  // user gets director details
+  getDirector(title: string, name: string, bio: string, birth: string): void {
+    this.dialog.open(DirectorViewComponent, {
+      data: {
+        Title: title,
+        Name: name,
+        Bio: bio,
+        Birth: birth,
+      },
+      width: '500px',
+      panelClass: 'director-custom'
+    });
+  }
+
+  // user gets genre details
+  getGenre(title: string, name: string, description: string): void {
+    this.dialog.open(GenreViewComponent, {
+      data: {
+        Title: title,
+        Name: name,
+        Description: description,
+      },
+      width: '500px',
+      panelClass: 'genre-custom'
+    });
+    console.log('Name: ' + name)
+  }
+
+  getSynopsis(title: string, imagePath: any, description: string): void {
+    this.dialog.open(SynopsisViewComponent, {
+      data: {
+        Title: title,
+        ImagePath: imagePath,
+        Description: description,
+      },
+      width: '500px',
+      panelClass: 'synopsis-custom'
     });
   }
 
