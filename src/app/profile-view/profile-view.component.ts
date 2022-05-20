@@ -30,7 +30,7 @@ export class ProfileViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProfile();
-    this.getFavoriteMovies();
+    /* this.getFavoriteMovies(); */
   }
 
   // get user profile info
@@ -46,7 +46,7 @@ export class ProfileViewComponent implements OnInit {
     }
   }
 
-  getFavoriteMovies(): void {
+  /* getFavoriteMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
       this.movies.forEach((movie: any) => {
@@ -56,7 +56,7 @@ export class ProfileViewComponent implements OnInit {
       });
     });
     console.log(this.Favorites);
-  }
+  } */
 
   // delete favorite movie
   deleteFavoriteMovie(_id: string): void {
