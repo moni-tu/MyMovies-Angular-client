@@ -1,8 +1,8 @@
 <app-menu-bar></app-menu-bar>
 <div class="user-profile">
 
-    <mat-card>
-        <mat-card-header>
+    <mat-card class="user-profile-card">
+        <mat-card-header class="user-profile-header">
             <mat-card-title>Your Profile Information</mat-card-title>
         </mat-card-header>
         <mat-card-content class="user-profile-info">
@@ -37,7 +37,7 @@
     <mat-card *ngFor="let movie of Favorites; let i = index;" class="favorite-movies">
         <mat-card-header>
             <mat-card-title>
-              {{user.Favorites}} {{movie.title}}
+               {{movie.title}}
             </mat-card-title>
             <mat-card-subtitle>Directed by: 
                 <button 
