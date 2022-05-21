@@ -79,10 +79,9 @@ export class ProfileViewComponent implements OnInit {
   }
 
   // user gets director details
-  getDirector(title: string, name: string, bio: string, birth: string): void {
+  getDirector(name: string, bio: string, birth: string): void {
     this.dialog.open(DirectorViewComponent, {
       data: {
-        Title: title,
         Name: name,
         Bio: bio,
         Birth: birth,
@@ -93,10 +92,9 @@ export class ProfileViewComponent implements OnInit {
   }
 
   // user gets genre details
-  getGenre(title: string, name: string, description: string): void {
+  getGenre (name: string, description: string): void {
     this.dialog.open(GenreViewComponent, {
       data: {
-        Title: title,
         Name: name,
         Description: description,
       },
@@ -106,10 +104,9 @@ export class ProfileViewComponent implements OnInit {
     console.log('Name: ' + name)
   }
 
-  getSynopsis(title: string, imagePath: any, description: string): void {
+  getSynopsis( imagePath: any, description: string): void {
     this.dialog.open(SynopsisViewComponent, {
       data: {
-        Title: title,
         ImagePath: imagePath,
         Description: description,
       },

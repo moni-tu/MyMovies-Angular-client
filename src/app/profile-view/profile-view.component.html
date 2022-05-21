@@ -48,7 +48,6 @@
                   mat-raised-button
                   color="primary"
                   (click)="getDirector(
-                    movie.title,
                     movie.director.name,
                     movie.director.bio,
                     movie.director.birth
@@ -65,7 +64,6 @@
                 mat-raised-button
                 color="primary"
                 (click)="getGenre(
-                  movie.title,
                   movie.genre.name,
                   movie.genre.description
                   )"
@@ -78,7 +76,6 @@
                 mat-raised-button
                 color="primary"
                 (click)="getSynopsis(
-                    movie.title,
                     movie.imagePath,
                     movie.description
                   )"
