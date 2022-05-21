@@ -6,24 +6,35 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ● The app displays a welcome view where users are able to either log in or register an
 account.
+
 ● Once authenticated, the user views all movies.
+
 ● Upon clicking on a particular movie, users are taken to a single movie view, where
 additional movie details are displayed. The single movie view will contain the following
 additional features:
+
 ○ A button that when clicked takes a user to the director view, where details about the
 director of that particular movie will be displayed.
+
 ○ A button that when clicked takes a user to the genre view, where details about that
 particular genre of the movie will be displayed.
+
 ● Users can also select their favorite movies, view them in their profile page and delete them from their favorites.
 
 ## Technical Requirements
 
 ● The application is written in Angular (version 9 or later)
+
 ● The application requires the latest version of Node.js and npm package
+
 ● The application contains user registration and login forms
+
 ● The application is designed using Angular Material
+
 ● The application's codebase contains comments using Typedoc
+
 ● The project contains technical documentation using JSDoc
+
 ● The project is hosted on GitHub Pages https://moni-tu.github.io/MyMovies-Angular-client/welcome
 
 ## App Preview
