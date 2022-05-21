@@ -30,7 +30,7 @@ export class ProfileViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProfile();
-    /* this.getFavoriteMovies(); */
+    this.getFavoriteMovies();
   }
 
   // get user profile info
@@ -47,17 +47,23 @@ export class ProfileViewComponent implements OnInit {
     }
   }
 
-  /* getFavoriteMovies(): void {
-    this.fetchApiData.getAllMovies().subscribe((resp: any) => {
-      this.movies = resp;
-      this.movies.forEach((movie: any) => {
-        if (this.user.Favorites.includes(movie)) {
-          this.Favorites.push(movie);
-        }
+  getFavoriteMovies(): void {
+    const Username = localStorage.getItem('user');
+    console.log(Username);
+    if (Username) {
+      this.fetchApiData.getAllMovies().subscribe((resp: any) => {
+        this.movies = resp;
+        console.log(this.movies);
+        this.movies.forEach((movie: any) => {
+          if (this.user.Favorites.includes(movie._id)) {
+            this.Favorites.push(movie);
+          }
+        });
+        console.log(this.Favorites);
       });
-    });
-    console.log(this.Favorites);
-  } */
+      console.log(this.Favorites);
+    } 
+  } 
 
   // delete favorite movie
   deleteFavoriteMovie(_id: string): void {
