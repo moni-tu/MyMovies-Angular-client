@@ -7,6 +7,7 @@ import { DirectorViewComponent } from '../director-view/director-view.component'
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { GenreViewComponent } from '../genre-view/genre-view.component';
 import { SynopsisViewComponent } from '../synopsis-view/synopsis-view.component';
+import { UserEditViewComponent } from '../user-edit-view/user-edit-view.component';
 /* import { UserEditComponent } from '../user-edit/user-edit.component'; */
 
 @Component({
@@ -119,12 +120,12 @@ export class ProfileViewComponent implements OnInit {
   }
 
   //edit user info
-  /* openEditUserProfile(): void {
-    this.dialog.open(UserEditComponent, {
+  editUserProfile(): void {
+    this.dialog.open(UserEditViewComponent, {
       width: '500px',
       panelClass: 'edit-user-custom',
     });
-  } */
+  }
 
   deleteUserProfile(): void {
     if (confirm('Are your sure you want to delete your account? This can\'t be undone.')) {

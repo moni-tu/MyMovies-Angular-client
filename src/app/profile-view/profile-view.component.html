@@ -16,7 +16,7 @@
         <mat-card-actions class="usercard-actions">
           <button
                 mat-stroked-button
-                
+                (click)="editUserProfile()"
                 class="edit-profile-button"
             > 
                 <mat-icon>edit</mat-icon>
@@ -88,8 +88,8 @@
                     class="delete-fav-button"
                     mat-icon-button 
                     (click)="deleteFavoriteMovie(movie._id)"
-                  >
-                    <mat-icon>remove from favorite movies</mat-icon>
+                  > Remove from favorites
+                    <!-- <mat-icon>remove from favorite movies</mat-icon> -->
                   </button>
                 </mat-card-actions>
             </mat-card-actions>
