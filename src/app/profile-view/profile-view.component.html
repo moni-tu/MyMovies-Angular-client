@@ -1,4 +1,5 @@
-<app-menu-bar></app-menu-bar>
+<!-- <app-menu-bar></app-menu-bar> -->
+<router-outlet></router-outlet>
 <div class="user-profile">
 
     <mat-card class="user-profile-card">
@@ -34,16 +35,18 @@
     </mat-card>
 
     <!-- the content of the mat-card lable is very important -->
-    <mat-card *ngFor="let movie of Favorites; let i = index;" class="favorite-movies">
+    <div class="favourites-list">
+    <h2 class="favorites-header">Favorite Movies</h2>
+    <mat-card *ngFor="let movie of Favorites;" class="favorite-movies" style="margin:2em;">
         <mat-card-header>
             <mat-card-title>
-               {{movie.title}}
+              {{movie.title}}
             </mat-card-title>
             <mat-card-subtitle>Directed by: 
                 <button 
                   class="director-button"
-                  mat-button
-                  color="grey"
+                  mat-raised-button
+                  color="primary"
                   (click)="getDirector(
                     movie.title,
                     movie.director.name,
@@ -94,6 +97,6 @@
                 </mat-card-actions>
             </mat-card-actions>
     </mat-card>
-    
+  </div>
 
 </div>
