@@ -12,7 +12,7 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
 export class AppComponent {
   title = 'myMovies-Angular-client';
 
-  constructor(public dialog: MatDialog) { }
+  /* constructor(public dialog: MatDialog) { }
   // This is the function that will open the dialog when the signup button is clicked  
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
@@ -32,5 +32,5 @@ export class AppComponent {
     this.dialog.open(MovieCardComponent, {
       width: '500px'
     });
-  }
+  } */
 }
