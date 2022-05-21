@@ -103,7 +103,7 @@ export class FetchApiDataService {
   // user update his profile
   editUserProfile(userData: object): Observable<any> {
     const token = localStorage.getItem('token');
-    const Username = localStorage.getItem('Username');
+    const Username = localStorage.getItem('user');
     return this.http
       // Username with capital letter in profile-view.jsx
       .put(apiUrl + `users/${Username}`, userData, {
