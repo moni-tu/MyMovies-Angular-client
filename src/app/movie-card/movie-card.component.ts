@@ -68,4 +68,18 @@ export class MovieCardComponent implements OnInit {
       width: '500px'
     });
   }
+
+  addToFavorites(_id: string): void {
+    console.log(_id);
+    const token = localStorage.getItem('token');
+    console.log(token)
+    this.fetchApiData.addFavoriteMovie(_id).subscribe((res: any) => {
+      this.snackBar.open(`Successfully added ${_id} to favorite movies.`, 'OK', {
+        duration: 4000,
+        verticalPosition: 'top'
+      });
+      console.log(res)
+      this.ngOnInit();
+    });
+  }
 }
