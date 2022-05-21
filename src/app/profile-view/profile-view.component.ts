@@ -83,12 +83,11 @@ export class ProfileViewComponent implements OnInit {
   getDirector(name: string, bio: string, birth: string): void {
     this.dialog.open(DirectorViewComponent, {
       data: {
-        Name: name,
-        Bio: bio,
-        Birth: birth,
+        name: name,
+        bio: bio,
+        birth: birth,
       },
       width: '500px',
-      panelClass: 'director-custom'
     });
     console.log('Director: ' + name)
   }
@@ -97,8 +96,8 @@ export class ProfileViewComponent implements OnInit {
   getGenre (name: string, description: string): void {
     this.dialog.open(GenreViewComponent, {
       data: {
-        Name: name,
-        Description: description,
+        name: name,
+        description: description,
       },
       width: '500px',
       panelClass: 'genre-custom'
@@ -110,8 +109,8 @@ export class ProfileViewComponent implements OnInit {
   getSynopsis( imagePath: any, description: string): void {
     this.dialog.open(SynopsisViewComponent, {
       data: {
-        ImagePath: imagePath,
-        Description: description,
+        imagePath: imagePath,
+        description: description,
       },
       width: '500px',
       panelClass: 'synopsis-custom'
