@@ -31,10 +31,9 @@ import { ProfileViewComponent } from './profile-view/profile-view.component';
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
-  /* { path: 'profile', component: ProfileViewComponent }, */
+  { path: 'profile', component: ProfileViewComponent },
   // in case anything happens we need the app to know where to re-direct the user
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
-  { path: 'profile', component: ProfileViewComponent},
 ];
 
 @NgModule({
