@@ -130,7 +130,7 @@ export class FetchApiDataService {
   // user removes favorite movie from list
   deleteFavoriteMovie(_id: string): Observable<any> {
     const token = localStorage.getItem('token');
-    const Username = localStorage.getItem('username');
+    const Username = localStorage.getItem('user');
     return this.http
       .delete(apiUrl + `users/${Username}/favorites/${_id}`, {
         headers: new HttpHeaders({
