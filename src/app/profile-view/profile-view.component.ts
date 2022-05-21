@@ -89,6 +89,7 @@ export class ProfileViewComponent implements OnInit {
       width: '500px',
       panelClass: 'director-custom'
     });
+    console.log('Director: ' + name)
   }
 
   // user gets genre details
@@ -102,6 +103,7 @@ export class ProfileViewComponent implements OnInit {
       panelClass: 'genre-custom'
     });
     console.log('Name: ' + name)
+    console.log('Description: ' + description)
   }
 
   getSynopsis( imagePath: any, description: string): void {
@@ -113,6 +115,7 @@ export class ProfileViewComponent implements OnInit {
       width: '500px',
       panelClass: 'synopsis-custom'
     });
+    console.log('Description: ' + description)
   }
 
   //edit user info
