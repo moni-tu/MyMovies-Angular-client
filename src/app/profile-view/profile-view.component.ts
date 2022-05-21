@@ -36,6 +36,7 @@ export class ProfileViewComponent implements OnInit {
   // get user profile info
   getProfile(): void {
     const Username = localStorage.getItem('user');
+    console.log(Username);
     if (Username) {
       // getUserProfile() is in fetchapidataservice.ts
       this.fetchApiData.getUserProfile().subscribe((resp: any) => {
