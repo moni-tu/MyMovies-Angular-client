@@ -6,13 +6,16 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## App Preview
 
-Login Page
+#### Login Page
+
 ![myMovies Angular Login View](https://user-images.githubusercontent.com/91124224/169659072-78452192-a5d1-4df1-8928-ebb8c5f67926.png)
 
-Movie Card Page
+#### Movie Card Page
+
 ![myMovies-Angular ProfileView](https://user-images.githubusercontent.com/91124224/169659076-c8e68cf9-89a5-4683-8c2d-01392123fdef.png)
 
-Profile Page
+#### Profile Page
+
 ![myMovies-Angular-Movie Card](https://user-images.githubusercontent.com/91124224/169659081-8bc0a879-d8e3-422e-a79f-bc9df1737332.png)
 
 ## Development server
