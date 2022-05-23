@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
+### GETTING STARTED
+
+The easiest way to start is to clone the repository.
+
+# clone the repository
+
+```
+git clone https://github.com/moni-tu/MyMovies-Angular-client.git
+```
+
 ## Key Features
 
 ● The app displays a welcome view where users are able to either log in or register an
