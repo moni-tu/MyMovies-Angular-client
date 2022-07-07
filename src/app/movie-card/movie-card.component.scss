@@ -1,4 +1,65 @@
-.mat-card {
+/* .mat-card {
     width: 500px;
     height: 600px;
+} */
+
+.mat-card-flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mat-card {
+    width: 31%;
+}
+
+/* @media only screen and (max-width: 600px) {
+    .mat-card img{
+        object-fit: cover; 
+        height: 800px;
+    }
+  } */
+@media only screen and (min-width: 1900px) {
+    .mat-card {
+        width: 25%;
+    }
+    .mat-card img{
+        object-fit: fit; /*this makes the image in src fit to the size specified below*/
+        height: 800px;
+    }
+}
+@media only screen and (max-width: 1900px) {
+    .mat-card img{
+        object-fit: fit; /*this makes the image in src fit to the size specified below*/
+        height: 800px;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .mat-card img{
+        object-fit: fit; /*this makes the image in src fit to the size specified below*/
+        height: 600px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .mat-card img{
+        object-fit: fit; /*this makes the image in src fit to the size specified below*/
+        height: 400px;
+    }
+}
+@media only screen and (max-width: 427px) {
+    .mat-card {
+        width: 100%;
+    }
+    .mat-card img{
+        object-fit: fit; /*this makes the image in src fit to the size specified below*/
+        height: 500px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .mat-card {
+        width: 100%;
+    }
+    .mat-card img{
+        object-fit: fit; /*this makes the image in src fit to the size specified below*/
+        height: 500px;
+    }
 }
